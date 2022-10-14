@@ -60,7 +60,7 @@ To explain the execution of the script well it goes basically like this.
 
 2. The third and final parameter to decide on is what performance governor you want to use. In this script there are two modes usable, that being `powersave` or `performance`. This should be self explanatory.
 
-### How to check gorvenor setting
+### How to check governor setting
 Run this command in the terminal after startup or after script execution
 ```bash
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
