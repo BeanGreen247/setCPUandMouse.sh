@@ -25,13 +25,15 @@ if [[ "$1" == "user" ]]; then
 		# powersave mode
 		echo "$passVar" | sudo -S echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 		echo "$passVar" | sudo -S cpufreq-set --governor powersave
-		echo "$passVar" | sudo -S sudo cpupower frequency-set --min 100000 --max 2300000 -g powersave
+		echo "$passVar" | sudo -S sudo cpupower frequency-set --min 100000 --max 1300000 -g powersave
+		echo "$passVar" | sudo -S cpupower -c all set --perf-bias 15
 		echo "powersave mode executed"
 	elif [[ "$userPowerInput" == "performance" ]]; then
 		# performance mode
 		echo "$passVar" | sudo -S echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 		echo "$passVar" | sudo -S cpufreq-set --governor performance
 		echo "$passVar" | sudo -S sudo cpupower frequency-set --min 2300000 --max 2300000 -g performance
+		echo "$passVar" | sudo -S cpupower -c all set --perf-bias 0
 		echo "performance mode executed"
 	else
 		echo "no option selected"
@@ -53,11 +55,13 @@ elif [[ "$1" == "auto" ]]; then
 		echo $passVar | sudo -S echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 		echo $passVar | sudo -S cpufreq-set --governor powersave
 		echo $passVar | sudo -S sudo cpupower frequency-set --min 100000 --max 2300000 -g powersave
+		echo $passVar | sudo -S cpupower -c all set --perf-bias 15
 	elif [[ "$3" == "performance" ]]; then
 		# performance mode
 		echo $passVar | sudo -S echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 		echo $passVar | sudo -S cpufreq-set --governor performance
 		echo $passVar | sudo -S sudo cpupower frequency-set --min 2300000 --max 2300000 -g performance
+		echo $passVar | sudo -S cpupower -c all set --perf-bias 0
 	else
 		echo "no 3rd param passed or not a valid option"
 	fi
