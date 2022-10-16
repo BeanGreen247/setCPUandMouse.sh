@@ -36,6 +36,8 @@ if [[ $? == 1 ]]; then
 else
     2&>/dev/null
 fi
+# setting mouse acc to flat aka disable mouse acc, you may comment out if not wanted
+xset m 0 0
 }
 mainForm
 if [[ "$(echo $ENTRY)" == "Help" ]]; then
@@ -49,3 +51,5 @@ if [[ $? == 1 ]]; then
 else
     2&>/dev/null
 fi
+# setting mouse acc to flat aka disable mouse acc, you may comment out if not wanted
+xset m 0 0
