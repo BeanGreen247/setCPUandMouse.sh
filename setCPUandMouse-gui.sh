@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x # debugging purposes
+#set -x # debugging purposes
 mainForm () {
 ENTRY=`zenity --forms --title="System Power Plan settings" --text="Settings" \
    --add-entry="Kernel Type" \
