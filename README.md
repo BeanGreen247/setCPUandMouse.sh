@@ -1,10 +1,19 @@
 # setCPUandMouse.sh
 a startup script for automated powerplan setting and clock speed setting, can also disable mouse acceleration
+* setCPUandMouse.sh - terminal version, can be used in automation
+* setCPUandMouse-gui.sh - gui verion, using zenity, not recommended to be used in automation
 
 ### Information
 This script has 2 modes that can be used. User input based execution mode and automated execution mode.
 
 To run the script u need to set either 1 or 3 parameters based on what mode u want to use.
+
+### Dependencies
+Some will be installed by the script automatically
+* indicator-cpufreq [automatic install]
+* cpufrequtils [automatic install]
+* zenity [has to be installed by the user]
+	* used by setCPUandMouse-gui.sh
 
 ### User input based execution mode
 as the name suggests in this mode every step will ask the user for input, useful if run manually
