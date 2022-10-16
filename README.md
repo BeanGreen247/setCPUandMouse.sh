@@ -14,7 +14,7 @@ To execute the script in this mode run it as follows
 sudo bash /home/beangreen247/autostart_bin/setCPUandMouse.sh user
 ```
 
-You will be asked a couple questions so answer the as needed.
+You will be asked a couple questions so answer them as needed.
 
 ### Automated execution mode
 as for this one, this one is my personal favorite as it will run on its own and can be used in `crontab -e` at startup
