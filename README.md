@@ -2,12 +2,14 @@
 a startup script for automated powerplan setting and clock speed setting, can also disable mouse acceleration
 * setCPUandMouse.sh - terminal version, can be used in automation
 * setCPUandMouse-gui.sh - gui verion, using zenity, not recommended to be used in automation
+	* has one advantage, can be run during any point to set laptop/desktop into high performance mode
 
 ### Information
 This script has 2 modes that can be used. User input based execution mode and automated execution mode.
 
 To run the script u need to set either 1 or 3 parameters based on what mode u want to use.
 
+Make sure to adjust the clock speed of the cpu based on your setup. Ckeck [Changing the clock speed limit](#changing-the-clock-speed-limit) for more information. 
 ### Dependencies
 Some will be installed by the script automatically
 * indicator-cpufreq [automatic install]
